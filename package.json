@@ -1,0 +1,21 @@
+{
+  "name": "chewie-pics",
+  "version": "1.0.0",
+  "description": "Pictures of my dog, Chewie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertjlooby/chewie-pics.git"
+  },
+  "keywords": [
+    "chewie",
+    "shih tzu",
+    "japanese chin",
+    "chewbacca"
+  ],
+  "author": "Robert Looby",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/robertjlooby/chewie-pics/issues"
+  },
+  "homepage": "https://github.com/robertjlooby/chewie-pics"
+}
