@@ -1,6 +1,6 @@
 {
   "name": "chewie-pics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Pictures of my dog, Chewie",
   "main": "index.js",
   "assets": [
