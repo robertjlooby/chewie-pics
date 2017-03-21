@@ -1,4 +1,4 @@
-var numPics = 26;
+var numPics = 37;
 
 module.exports = {
   random: function() {
