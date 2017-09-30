@@ -1,6 +1,6 @@
 {
   "name": "chewie-pics",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Pictures of my dog, Chewie",
   "main": "index.js",
   "assets": [
@@ -47,7 +47,14 @@
     "chewie40.jpg",
     "chewie41.jpg",
     "chewie42.jpg",
-    "chewie43.jpg"
+    "chewie43.jpg",
+    "chewie44.jpg",
+    "chewie45.jpg",
+    "chewie46.jpg",
+    "chewie47.jpg",
+    "chewie48.jpg",
+    "chewie49.jpg",
+    "chewie50.jpg"
   ],
   "repository": {
     "type": "git",
