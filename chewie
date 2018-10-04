@@ -39,6 +39,10 @@ function print_image() {
 
 ## Main
 
-print_image "$1" "$(base64 < "$1")"
+MAX_NUM=50
+
+FILE="chewie`jot -r 1 0 $MAX_NUM`.jpg"
+
+print_image "$FILE" "$(base64 < "$FILE")"
 
 exit 0
