@@ -45,6 +45,7 @@ function print_image() {
 
     printf "%s" "$3" | base64 $BASE64ARG | wc -c | awk '{printf "size=%d",$1}'
     printf ";inline=$2"
+    printf ";height=10"
     printf ":"
     printf "%s" "$3"
     print_st
