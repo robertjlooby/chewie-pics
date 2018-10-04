@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# tmux requires unrecognized OSC sequences to be wrapped with DCS tmux;
+# <sequence> ST, and for all ESCs in <sequence> to be replaced with ESC ESC. It
+# only accepts ESC backslash for ST. We use TERM instead of TMUX because TERM
+# gets passed through ssh.
+function print_osc() {
+    if [[ $TERM == screen* ]] ; then
+        printf "\033Ptmux;\033\033]"
+    else
+        printf "\033]"
+    fi
+}
+
+# More of the tmux workaround described above.
+function print_st() {
+    if [[ $TERM == screen* ]] ; then
+        printf "\a\033\\"
+    else
+        printf "\a"
+    fi
+}
+
+# print_image filename base64contents
+#   filename: Filename to convey to client
+#   base64contents: Base64-encoded contents
+function print_image() {
+    print_osc
+    printf '1337;File='
+    printf 'name='`printf "%s" "$1" | base64`";"
+
+    printf ";inline=1"
+    printf ";height=10"
+    printf ":"
+    printf "%s" "$2"
+    print_st
+    printf '\n'
+}
+
+## Main
+
+MAX_NUM=50
+
+FILE="chewie`jot -r 1 0 $MAX_NUM`.jpg"
+
+print_image "$FILE" "$(base64 < "$FILE")"
+
+exit 0
