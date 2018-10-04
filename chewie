@@ -41,7 +41,9 @@ function print_image() {
 
 MAX_NUM=50
 
-FILE="chewie`jot -r 1 0 $MAX_NUM`.jpg"
+CHEWIE_HOME='.'
+
+FILE="$CHEWIE_HOME/chewie`jot -r 1 0 $MAX_NUM`.jpg"
 
 print_image "$FILE" "$(base64 < "$FILE")"
 
