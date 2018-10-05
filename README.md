@@ -21,3 +21,13 @@ var chewiePics = require('chewie-pics');
 var path = 'assets/images/' + chewiePics.random();
 // path will be like 'assets/images/chewie12.jpg'
 ```
+
+## iTerm2 package
+
+This package is also distributed as a command line script to will display pictures of Chewie in iTerm2.
+
+To install and use:
+
+1) `brew tap robertjlooby/homebrew`
+1) `brew install chewie-pics`
+1) `chewie`
